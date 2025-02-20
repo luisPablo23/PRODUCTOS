@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 60px; /* Ajusta la altura según necesites */
+}
+
+.navbar-logo {
+    position: absolute;
+    left: 20px; /* Ajusta la distancia desde el borde izquierdo */
+}
+
+.navbar-logo img {
+    height: 50px; /* Ajusta según el tamaño de tu logo */
+}
+
+.navbar-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-item {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}

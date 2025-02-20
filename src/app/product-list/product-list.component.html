@@ -1,0 +1,20 @@
+<div class="carousel-container">
+    <div class="product-grid">
+      <div *ngFor="let product of visibleProducts" class="product-card">
+        <div class="product-image">
+          <img [src]="product.image" alt="{{product.name}}">
+        </div>
+        <div class="product-details">
+          <h2>{{product.name}}</h2>
+          <p class="description">{{product.description}}</p>
+          <p class="price">{{product.price}}</p>
+          <p class="rating">{{product.rating}}</p>
+          <button class="whatsapp-button" (click)="openWhatsApp(product.name)">
+            <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+          </button>          
+        </div>
+      </div>
+    </div>
+    <button class="carousel-button prev" (click)="prevSlide()">&#10094;</button>
+    <button class="carousel-button next" (click)="nextSlide()">&#10095;</button>
+  </div>

@@ -74,12 +74,6 @@ export class ProductListComponent {
     }
     // Añade más productos según sea necesario
   ];
-  //btn whatsapp
-  openWhatsApp(productName: string) {
-    const message = encodeURIComponent(`Estoy interesado en ${productName}`);
-    window.open(`https://wa.me/?text=${message}`, '_blank');
-  }  
-
   currentIndex = 0; // Índice del primer producto visible
   productsPerPage = 4; // Número de productos por página
 
@@ -100,5 +94,11 @@ export class ProductListComponent {
     if (this.currentIndex - this.productsPerPage >= 0) {
       this.currentIndex -= this.productsPerPage;
     }
+  }
+
+  // Abre WhatsApp con el nombre del producto
+  openWhatsApp(productName: string) {
+    const url = `https://wa.me/?text=Estoy%20interesado%20en%20${productName}`;
+    window.open(url, '_blank');
   }
 }
